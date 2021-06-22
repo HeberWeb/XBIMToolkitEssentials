@@ -1,4 +1,5 @@
 ﻿using System;
+using XBIMToolkitEssentials.Services;
 
 namespace XBIMToolkitEssentials
 {
@@ -6,7 +7,7 @@ namespace XBIMToolkitEssentials
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            SpatialStructureExample.Show();
         }
     }
 }

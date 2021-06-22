@@ -5,4 +5,23 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Xbim.Essentials" Version="5.1.323" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="FileTests\SQR-ELE-LO-100-SIS-R00.ifc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="FileTests\SQR-ELE-LO-101-SIS-R00.ifc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="FileTests\SQR-ELE-LO-200-SIS-R00.ifc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="FileTests\SQR-ELE-LO-201-SIS-R00.ifc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
