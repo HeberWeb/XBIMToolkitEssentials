@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicModelOperations", "Bas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesExamples", "FilesExamples\FilesExamples.csproj", "{460DFFC2-AA6A-4D49-BEDC-02D32BBF3462}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelSpaceReportFromIFC", "ExcelSpaceReportFromIFC\ExcelSpaceReportFromIFC.csproj", "{4CBCD9B8-6D61-4452-B998-CCB98D13DF2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{460DFFC2-AA6A-4D49-BEDC-02D32BBF3462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{460DFFC2-AA6A-4D49-BEDC-02D32BBF3462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{460DFFC2-AA6A-4D49-BEDC-02D32BBF3462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CBCD9B8-6D61-4452-B998-CCB98D13DF2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CBCD9B8-6D61-4452-B998-CCB98D13DF2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CBCD9B8-6D61-4452-B998-CCB98D13DF2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CBCD9B8-6D61-4452-B998-CCB98D13DF2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
