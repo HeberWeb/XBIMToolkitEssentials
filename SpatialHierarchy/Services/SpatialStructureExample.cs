@@ -14,13 +14,29 @@ namespace SpatialHierarchy.Services
     {
         public static void Show()
         {
-            Console.WriteLine("Digite o nome do arquivo");
+            Console.WriteLine("Digite o nome do arquivo, ou nada para sair!");
             var nameFile = Console.ReadLine();
-            string file = Path.Combine(System.IO.Directory.GetCurrentDirectory(), @"FileTests\", nameFile);
-            using (var model = IfcStore.Open(file))
+            if (string.IsNullOrEmpty(nameFile))
             {
-                var proj = model.Instances.FirstOrDefault<IIfcProject>();
-                PrintHierarchy(proj, 0);
+                return;
+            }
+            else
+            {
+                string file = Path.Combine(System.IO.Directory.GetCurrentDirectory(), @"FileTests\", nameFile);
+                if (File.Exists(file))
+                {
+                    using (var model = IfcStore.Open(file))
+                    {
+                        var proj = model.Instances.FirstOrDefault<IIfcProject>();
+                        PrintHierarchy(proj, 0);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Arquivo não encontrado");
+                }
+
+                Show();
             }
         }
 
