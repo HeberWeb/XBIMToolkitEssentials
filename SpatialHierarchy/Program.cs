@@ -1,7 +1,7 @@
-﻿using System;
-using XBIMToolkitEssentials.Services;
+﻿using SpatialHierarchy.Services;
+using System;
 
-namespace XBIMToolkitEssentials
+namespace SpatialHierarchy
 {
     class Program
     {

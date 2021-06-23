@@ -8,7 +8,7 @@ using Xbim.Common;
 using Xbim.Ifc;
 using Xbim.Ifc4.Interfaces;
 
-namespace XBIMToolkitEssentials.Services
+namespace SpatialHierarchy.Services
 {
     class SpatialStructureExample
     {
