@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpatialHierarchy", "SpatialHierarchy\SpatialHierarchy.csproj", "{5A98F1EA-54C0-46F8-A627-BD69E8D607D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpatialHierarchy", "SpatialHierarchy\SpatialHierarchy.csproj", "{5A98F1EA-54C0-46F8-A627-BD69E8D607D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicModelOperations", "BasicModelOperations\BasicModelOperations.csproj", "{83C01584-3621-4FEC-9975-A0DBA5AE2A0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicModelOperations", "BasicModelOperations\BasicModelOperations.csproj", "{83C01584-3621-4FEC-9975-A0DBA5AE2A0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesExamples", "FilesExamples\FilesExamples.csproj", "{460DFFC2-AA6A-4D49-BEDC-02D32BBF3462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilesExamples", "FilesExamples\FilesExamples.csproj", "{460DFFC2-AA6A-4D49-BEDC-02D32BBF3462}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelSpaceReportFromIFC", "ExcelSpaceReportFromIFC\ExcelSpaceReportFromIFC.csproj", "{4CBCD9B8-6D61-4452-B998-CCB98D13DF2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelSpaceReportFromIFC", "ExcelSpaceReportFromIFC\ExcelSpaceReportFromIFC.csproj", "{4CBCD9B8-6D61-4452-B998-CCB98D13DF2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorialEventfulBuildingWebUi", "TutorialEventfulBuildingWebUi\TutorialEventfulBuildingWebUi.csproj", "{B3CA66F7-6FF9-4E4A-A4DF-D85CCCCFC205}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4CBCD9B8-6D61-4452-B998-CCB98D13DF2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CBCD9B8-6D61-4452-B998-CCB98D13DF2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CBCD9B8-6D61-4452-B998-CCB98D13DF2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3CA66F7-6FF9-4E4A-A4DF-D85CCCCFC205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3CA66F7-6FF9-4E4A-A4DF-D85CCCCFC205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3CA66F7-6FF9-4E4A-A4DF-D85CCCCFC205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3CA66F7-6FF9-4E4A-A4DF-D85CCCCFC205}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

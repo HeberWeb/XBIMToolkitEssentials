@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="autodoc-body-viewer" class="autodoc-body-viewer notouch dark-theme quality-text" style="height: 100%; width: 100%; overflow: hidden;">
+    <!-- Pre-loader start -->
+    <div class="theme-loader" style="display:none;">
+        <div class="loader-track">
+            <div class="cell preloader5 loader-block">
+                <div class="circle-5 l"></div>
+                <div class="circle-5 m"></div>
+                <div class="circle-5 r"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <label>Insira o nome do arquivo sem a extensão</label>
+    <input type="text" id="nameFile" />
+    <button id="testView">Test View</button>
+
+    @* MODAL  VISUALIZADOR *@
+    <canvas id="viewer" style="width:80% !important;height:80% !important;"></canvas>
+
+    @* BARRA FERRAMENTAS *@
+    <div id="toolbar-geral">
+        <div id="toolbar-tools" class="adsk-control adsk-toolbar" style="display: block;">
+            @*grupos de botões*@
+            <div id="navTools" class="adsk-control adsk-control-group" style="margin-left:90px;">
+
+                @* >>> BUTTON  ORBITA  <<< *@
+                <div id="background-tools" onclick='viewer.buttonSubMenu("orbitSubMenu");' class="adsk-control adsk-button inactive" style="display: block;">
+                    <div class="adsk-control inactive adsk-button-arrow">
+                        <div class="adsk-button-icon"></div>
+                    </div>
+                    <div id="orbitSubMenu" class="adsk-control adsk-control-group toolbar-vertical-group autodoc-hidden">
+                        <div onclick="if (viewer) viewerFile.navigationMode = 'free-orbit';" class="adsk-control adsk-button inactive">
+                            <div class="adsk-button-icon autodoc-icon-orbita-livre"></div>
+                            <div class="adsk-control-tooltip" tooltiptext="TituloOrbitaLivre">TituloOrbitaLivre</div>
+                        </div>
+                        <div onclick="if (viewer) viewerFile.navigationMode = 'orbit';" class="adsk-control adsk-button inactive">
+                            <div class="adsk-button-icon autodoc-icon-orbita-fixa"></div>
+                            <div class="adsk-control-tooltip" tooltiptext="TituloOrbitaFixa">TituloOrbitaFixa</div>
+                        </div>
+                    </div>
+                    <div id="bg-button-submenu" class="adsk-button-icon autodoc-icon-orbita"></div>
+                    <div class="adsk-control-tooltip" tooltiptext="TituloOrbita">TituloOrbita</div>
+                </div>
+
+                @* >>> BUTTON  PAN <<< *@
+                <div class="adsk-control adsk-button inactive">
+                    <div class="adsk-button-icon autodoc-icon-pan" onclick="if (viewer) viewerFile.navigationMode = 'pan';"></div>
+                    <div class="adsk-control-tooltip" tooltiptext="TituloPan">TituloPan</div>
+                </div>
+
+                @* >>> BUTTON  ZOOM <<< *@
+                <div class="adsk-control adsk-button inactive">
+                    <div class="adsk-button-icon autodoc-icon-zoom" onclick="if (viewer) viewerFile.navigationMode = 'zoom';"></div>
+                    <div class="adsk-control-tooltip" tooltiptext="TituloZoom">TituloZoom</div>
+                </div>
+
+                @* >>> BUTTON VISTA PRE DEFINIDA <<< *@
+                <div id="background-tools" onclick='viewer.buttonSubMenu("vistasSubMenu");' class="adsk-control adsk-button inactive" style="display: block;">
+                    <div class="adsk-control inactive adsk-button-arrow">
+                        <div class="adsk-button-icon"></div>
+                    </div>
+                    <div id="vistasSubMenu" class="adsk-control adsk-control-group toolbar-vertical-group autodoc-hidden">
+                        <div onclick="if (viewer) viewerFile.show(ViewType.RIGHT);" class="adsk-control adsk-button inactive">
+                            <div class="adsk-button-icon autodoc-icon-vista-direita"></div>
+                            <div class="adsk-control-tooltip" tooltiptext="TituloDireita">TituloDireita</div>
+                        </div>
+                        <div onclick="if (viewer) viewerFile.show(ViewType.LEFT);" class="adsk-control adsk-button inactive">
+                            <div class="adsk-button-icon autodoc-icon-vista-esquerda"></div>
+                            <div class="adsk-control-tooltip" tooltiptext="TituloEsquerda">TituloEsquerda</div>
+                        </div>
+                        <div onclick="if (viewer) viewerFile.show(ViewType.BOTTOM);" class="adsk-control adsk-button inactive">
+                            <div class="adsk-button-icon autodoc-icon-vista-inferior"></div>
+                            <div class="adsk-control-tooltip" tooltiptext="TituloInferior">TituloInferior</div>
+                        </div>
+                        <div onclick="if (viewer) viewerFile.show(ViewType.TOP);" class="adsk-control adsk-button inactive">
+                            <div class="adsk-button-icon autodoc-icon-vista-superior"></div>
+                            <div class="adsk-control-tooltip" tooltiptext="TituloSuperior">TituloSuperior</div>
+                        </div>
+                        <div onclick="if (viewer) viewerFile.show(ViewType.FRONT);" class="adsk-control adsk-button inactive">
+                            <div class="adsk-button-icon autodoc-icon-vista-frontal"></div>
+                            <div class="adsk-control-tooltip" tooltiptext="TituloFrontal">TituloFrontal</div>
+                        </div>
+                        <div onclick="if (viewer) viewerFile.show(ViewType.BACK);" class="adsk-control adsk-button inactive">
+                            <div class="adsk-button-icon autodoc-icon-vista-posterior"></div>
+                            <div class="adsk-control-tooltip" tooltiptext="TituloPosterior">TituloPosterior</div>
+                        </div>
+                    </div>
+                    <div id="bg-button-submenu" class="adsk-button-icon autodoc-icon-vista-predefinida"></div>
+                    <div class="adsk-control-tooltip" tooltiptext="TituloVistasPreDefinidas">TituloVistasPreDefinidas</div>
+                </div>
+
+                @* >>> BUTTON ZOOM ALL <<< *@
+                <div class="adsk-control adsk-button inactive">
+                    <div class="adsk-button-icon autodoc-icon-zoom-resize" onclick="if (viewer) viewerFile.show(ViewType.DEFAULT);"></div>
+                    <div class="adsk-control-tooltip" tooltiptext="TituloZoomAll">TituloZoomAll</div>
+                </div>
+
+                @* >>> BUTTON VISTA ORTOGONAL <<< *@
+                <div class="adsk-control adsk-button inactive">
+                    <input type="hidden" id="vista-ortogonal" name="vista-ortogonal" value="1" />
+                    <div class="adsk-button-icon autodoc-icon-ortogonal" style="background-color:#2e2e2e !important" onclick="viewer.setCamera(this)"></div>
+                    <div class="adsk-control-tooltip" id="tooltip-vista-ortogonal">TituloOrtogonal</div>
+                </div>
+
+                @* >>> BUTTON Show/Hide <<< *@
+                <div id="background-tools" onclick='viewer.buttonSubMenu("showHideSubMenu");' class="adsk-control adsk-button inactive" style="display: block;">
+                    <div class="adsk-control inactive adsk-button-arrow">
+                        <div class="adsk-button-icon"></div>
+                    </div>
+                    <div id="showHideSubMenu" class="adsk-control adsk-control-group toolbar-vertical-group autodoc-hidden">
+                        <div id="showHide" name="hideProduct" value="hideProduct" class="adsk-control adsk-button inactive">
+                            <div class="adsk-button-icon autodoc-icon-Esconder-objeto"></div>
+                            <div class="adsk-control-tooltip" tooltiptext="Esconder objeto">TituloEsconderObjeto</div>
+                        </div>
+                        <div id="esconderObjeto" onclick="if (viewer) viewerFile.resetState();" class="adsk-control adsk-button inactive">
+                            <div class="adsk-button-icon autodoc-icon-Mostrar-tudo"></div>
+                            <div class="adsk-control-tooltip" tooltiptext="Mostrar tudo">TituloMostrarTudo</div>
+                        </div>
+                    </div>
+                    <div id="bg-button-submenu" class="adsk-button-icon autodoc-icon-show_hide"></div>
+                    <div class="adsk-control-tooltip" tooltiptext="Show/Hide ">TituloShowHide</div>
+                </div>
+
+                @* >>> BUTTON TRANSPARENCIA <<< *@
+                <div class="adsk-control adsk-button inactive">
+                    <input type="hidden" id="transparencia" name="transparencia" value="1" />
+                    <div class="adsk-button-icon autodoc-icon-transparencia" style="background-color:#2e2e2e !important" onclick="viewer.setTransparencia(this)"></div>
+                    <div class="adsk-control-tooltip" id="tooltip-transparencia">TituloNormal</div>
+                </div>
+            </div>
+            <img class="img-ifc" src="~/Content/theme-xbim-viewer/img/logo/ifc.png" />
+        </div>
+    </div>
+</div> 
