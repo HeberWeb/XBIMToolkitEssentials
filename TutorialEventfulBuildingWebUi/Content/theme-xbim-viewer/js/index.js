@@ -6,7 +6,6 @@ var argTeste = null;
 
 $(document).ready(function () {
     $('#testView').click(function () {
-        viewer.ToggleLoading(true)
         viewer.controleSubMenu();
         viewer.initViewer();
     })
@@ -17,36 +16,15 @@ var classButtonIcon = 'adsk-button-icon'
 var classControlTooltip = 'adsk-control-tooltip'
 
 var viewer = {
-    ToggleLoading: function(_trigger) {
-        var callback = $.Deferred();
-        if (_trigger) {
-            $(".theme-loader").css("opacity", "0.7");
-            $(".theme-loader").show();
-            callback.resolve();
-        } else {
-            $(".theme-loader").hide();
-            callback.resolve();
-            $(".theme-loader").animate({ opacity: "0" }, "fast");
-        }
-
-        return callback
-    },
-
     onLoadedFileOrFiles: function () {
-        if (objViewer.Vincular) {
-            if (countLoaded == objViewer.ListaIdsArquivosVincular.length) {
-                viewer.ToggleLoading(false);
-            }
-        }
-        else {
-            viewer.ToggleLoading(false);
-        }
+
     },
 
     initViewer: function () {
         countLoaded = 0;
         if (check.noErrors) {
             viewerFile = new Viewer('viewer');
+
             viewerFile.on('pick', function (args) {
                 var id = args.id;
                 pickedId = id;
@@ -63,22 +41,58 @@ var viewer = {
                 
             });
 
+            viewerFile.on('fps', function (fps) {
+                var spanFps = document.getElementById('spanFps')
+
+                if (spanFps) {
+                    spanFps.innerHTML = fps
+                }
+            });
+
             viewerFile.on('error', function (arg) {
                 var container = document.getElementById('errors');
                 if (container) {
                     //preppend error report
                     container.innerHTML = "<pre style='color:red;'>" + arg.message + "</pre><br/>" + container.innerHTML;
                 }
-                viewer.ToggleLoading(false);
             });
 
             viewerFile.on('pick', function (args) {
-                console.log(args)
-                var id = args.id;
-                var span = document.getElementById('productId');
-                if (span) {
-                    span.innerHTML = id ? id : 'model';
+                if (args == null || args.id == null) {
+                    return;
                 }
+                console.log(args);
+                var productId = args.id;
+                var modelId = args.model;
+                var coordsId = `[${Array.from(args.xyz).map(x => x.toFixed(2))}]`
+
+                var spanProductId = document.getElementById('productId');
+                var spanModelId = document.getElementById('modelId');
+                var spanCoordsId = document.getElementById('coordsId');
+                if (spanProductId) {
+                    spanProductId.innerHTML = productId ? productId : 'model spanProductId';
+                }
+                if (spanModelId) {
+                    spanModelId.innerHTML = modelId ? modelId : 'model spanModelId';
+                }
+                if (spanCoordsId) {
+                    spanCoordsId.innerHTML = coordsId ? coordsId : 'model spanCoordsId';
+                }
+
+                if (viewerFile.getState([args.id]) == State.HIGHLIGHTED) {
+                    viewerFile.setState(State.UNDEFINED, [args.id])
+                } else {
+                    viewerFile.setState(State.HIGHLIGHTED, [args.id])
+                }
+                
+            });
+
+            viewerFile.on('dblclick', function (args) {
+                if (args == null || args.id == null) {
+                    return;
+                }
+
+                viewerFile.zoomTo(args.id)
             });
 
             viewerFile
@@ -93,29 +107,16 @@ var viewer = {
         }
     },
 
-    initHiding: function () {
-        viewerFile.on('pick', function (args) {
-            var cmb = document.getElementById('showHide').getAttribute('value');
-            switch (cmb) {
-                case 'hideProduct':
-                    viewerFile.setState(State.HIDDEN, [args.id]);
-                    break;
-                default:
-                    break;
-            }
-        });
-    },
-
     buttonSubMenu: function (_nameButton) {
-        if ($('#' + _nameButton).hasClass('autodoc-hidden')) {
+        if ($('#' + _nameButton).hasClass('xbimTest-hidden')) {
 
             // EXIBE O SUBMENU
-            $(".toolbar-vertical-group").addClass("autodoc-hidden");
-            $('#' + _nameButton).removeClass("autodoc-hidden");
+            $(".toolbar-vertical-group").addClass("xbimTest-hidden");
+            $('#' + _nameButton).removeClass("xbimTest-hidden");
 
         } else {
             // OCULTA SUBMENU
-            $('#' + _nameButton).addClass("autodoc-hidden");
+            $('#' + _nameButton).addClass("xbimTest-hidden");
         }
     },
 
@@ -145,9 +146,9 @@ var viewer = {
     controleSubMenu: function () {
 
         //// CLICK FORA DO MENU
-        document.getElementById('autodoc-body-viewer').addEventListener('click', function () {
+        document.getElementById('xbimTest-body-viewer').addEventListener('click', function () {
 
-            $(".toolbar-vertical-group").addClass("autodoc-hidden");
+            $(".toolbar-vertical-group").addClass("xbimTest-hidden");
         });
 
         //// CLICK DENTRO DO MENU
@@ -158,74 +159,9 @@ var viewer = {
 
             if (isSubmenu.length == 0) {
                 // CASO NÂO, BUSCO E FECHO TODOS
-                var subMenusList = $(".toolbar-vertical-group").addClass("autodoc-hidden");
+                var subMenusList = $(".toolbar-vertical-group").addClass("xbimTest-hidden");
             }
         });
-    },
-
-    markup: {
-        openClose: function () {
-            //toolbar-tools
-            if (!$('#toolbar-markups').is(':visible')) {
-                $('#toolbar-tools').fadeOut();
-                $('#toolbar-markups').fadeIn();
-                cvjs_loadStickyNotesRedlinesUser();
-            } else {
-                cvjs_deleteAllStickyNotes();
-                cvjs_deleteAllRedlines();
-                $('#toolbar-markups').fadeOut();
-                $('#toolbar-tools').fadeIn();
-            }
-        },
-
-        setColorMarkup: function (_this, _color) {
-            $(_this).closest('#markup-colors').find('#markup-current-color').css('background-color', _color);
-        },
-
-        setCurrentAction: function (_this, _action, isComboButtun) {
-            eval(_action + "('floorPlan_svg')")
-            if (isComboButtun) {
-                viewer.buttonSetActive(_this, 'toolbar-markups', "markup-basictools");
-            } else {
-                viewer.buttonSetActive(_this, 'toolbar-markups', "");
-            }
-        },
-
-        deleteLastRedline: function () {
-            if (ValidaExclusaoMarkup()) {
-                cvjs_deleteLastRedline("floorPlan_svg")
-            }
-        }
-    },
-
-
-    backgroundColor: {
-        getItemSubmenu: function (_this, hexa_cor) {
-
-            switch (_this.id) {
-                case "bg_preto":
-                    //SETA COR PRETA DE FUNDO
-                    cvjs_setBackgroundColorHex(hexa_cor, floorplan_div_Array[cvjs_active_floorplan_div_nr]);
-                    break;
-                case "bg_branco":
-                    //SETA COR WHITE
-                    cvjs_setBackgroundColorHex(hexa_cor, floorplan_div_Array[cvjs_active_floorplan_div_nr]);
-                    break;
-                case "bg_cinza":
-                    //SETA COR CINZA
-                    cvjs_setBackgroundColorHex(hexa_cor, floorplan_div_Array[cvjs_active_floorplan_div_nr]);
-                    break;
-            }
-
-            //ALTERA O ÍCONE DO MENU
-            //viewer.backgroundColor.setIconSelected(_this);
-        },
-
-        setIconSelected: function (_thisBtnSubMenu) {
-            var btnSubMenu = $(_thisBtnSubMenu).closest('#background-tools').find('#bg-button-submenu');
-            btnSubMenu.removeClass('autodoc-icon-background');
-            btnSubMenu.toggleClass('autodoc-icon-' + _thisBtnSubMenu.id);
-        }
     },
 
     setCamera(_this) {

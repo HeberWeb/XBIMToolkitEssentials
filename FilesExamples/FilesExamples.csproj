@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Update="FileTests\0.ifc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="FileTests\SampleHouse.ifc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -48,7 +48,8 @@ namespace BasicModelOperations.Services
                             var id = allDoors.Skip(skipRandom).Take(1).First<IIfcDoor>().GlobalId;
 
                             var theDoor = model.Instances.FirstOrDefault<IIfcDoor>(x => x.GlobalId == id);
-                            Console.WriteLine($"Door ID: {theDoor.GlobalId}, Name: {theDoor.Name}");
+
+                            Console.WriteLine($"ProductId:{theDoor.GetHashCode()}, Door GlobalId: {theDoor.GlobalId}, Name: {theDoor.Name}");
 
                             // obtém todas as propriedades de valor único da porta
                             var properties = theDoor.IsDefinedBy

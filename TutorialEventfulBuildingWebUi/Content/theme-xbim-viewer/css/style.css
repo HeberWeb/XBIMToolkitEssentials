@@ -9,179 +9,179 @@ img.img-ifc {
     margin: 20px;
 }
 
-.autodoc-icon-vista-esquerda {
+.xbimTest-icon-vista-esquerda {
     background-image: url('../img/icons/vista-esquerda.png');
 }
-.autodoc-icon-vista-direita {
+.xbimTest-icon-vista-direita {
     background-image: url('../img/icons/vista-direita.png');
 }
-.autodoc-icon-vista-superior {
+.xbimTest-icon-vista-superior {
     background-image: url('../img/icons/vista-superior.png');
 }
-.autodoc-icon-vista-frontal {
+.xbimTest-icon-vista-frontal {
     background-image: url('../img/icons/vista-frontal.png');
 }
-.autodoc-icon-vista-inferior {
+.xbimTest-icon-vista-inferior {
     background-image: url('../img/icons/vista-inferior.png');
 }
-.autodoc-icon-vista-posterior {
+.xbimTest-icon-vista-posterior {
     background-image: url('../img/icons/vista-posterior.png');
 }
-.autodoc-icon-transparencia {
+.xbimTest-icon-transparencia {
     background-image: url('../img/icons/transparencia.png');
 }
-.autodoc-icon-orbita {
+.xbimTest-icon-orbita {
     background-image: url('../img/icons/orbita.png');
 }
-.autodoc-icon-orbita-livre {
+.xbimTest-icon-orbita-livre {
     background-image: url('../img/icons/orbita_livre.png');
 }
-.autodoc-icon-orbita-fixa {
+.xbimTest-icon-orbita-fixa {
     background-image: url('../img/icons/orbita_fixa.png');
 }
 
-.autodoc-icon-zoom {
+.xbimTest-icon-zoom {
     background-image: url('../img/icons/zoom.png');
 }
 
-.autodoc-icon-vista-predefinida {
+.xbimTest-icon-vista-predefinida {
     background-image: url('../img/icons/vista_predefinida.png');
 }
 
-.autodoc-icon-pan {
+.xbimTest-icon-pan {
     background-image: url('../img/icons/pan.png');
 }
 
-.autodoc-icon-ortogonal {
+.xbimTest-icon-ortogonal {
     background-image: url('../img/icons/ortogonal.png');
 }
 
-.autodoc-icon-show_hide {
+.xbimTest-icon-show_hide {
     background-image: url('../img/icons/Show_Hide.png')
 }
 
-.autodoc-icon-Esconder-objeto {
+.xbimTest-icon-Esconder-objeto {
     background-image: url('../img/icons/Esconder-objeto.png');
 }
 
-.autodoc-icon-Mostrar-tudo {
+.xbimTest-icon-Mostrar-tudo {
     background-image: url('../img/icons/Mostrar-tudo.png');
 }
 
-.autodoc-icon-layer {
+.xbimTest-icon-layer {
     background-image: url('../img/icons/layer.png');
 }
-.autodoc-icon-print {
+.xbimTest-icon-print {
     background-image: url('../img/icons/print_icon.png');
 
 }
-.autodoc-icon-background {
+.xbimTest-icon-background {
     background-image: url('../img/icons/background_color.png');
 
 }
-.autodoc-icon-line-thickeness {
+.xbimTest-icon-line-thickeness {
     background-image: url('../img/icons/thickness.png');
 
 }
-.autodoc-icon-measurement {
+.xbimTest-icon-measurement {
     background-image: url('../img/icons/measure.png');
 
 }
-.autodoc-icon-line {
+.xbimTest-icon-line {
     background-image: url('../img/icons/line_icon.png');
 
 }
-.autodoc-icon-calibrate-measurement {
+.xbimTest-icon-calibrate-measurement {
     background-image: url('../img/icons/calibrate_icon.png');
 
 }
-.autodoc-icon-markup {
+.xbimTest-icon-markup {
     background-image: url('../img/icons/mark-up_basictools.png');
 
 }
-.autodoc-icon-compare {
+.xbimTest-icon-compare {
     background-image: url('../img/icons/compare.png');
 
 }
-.autodoc-icon-load-second {
+.xbimTest-icon-load-second {
     background-image: url('../img/icons/compare-submenu.png');
 
 }
-.autodoc-icon-calibrate-toogle-ind {
+.xbimTest-icon-calibrate-toogle-ind {
     background-image: url('../img/icons/toogle_individually.png');
 
 }
-.autodoc-icon-toogle-overlay-drawings {
+.xbimTest-icon-toogle-overlay-drawings {
     background-image: url('../img/icons/toogle_overlaid.png');
 
 }
-.autodoc-icon-exit-compare {
+.xbimTest-icon-exit-compare {
     background-image: url('../img/icons/exit_compare.png');
 
 }
-.autodoc-icon-previous-page {
+.xbimTest-icon-previous-page {
     background-image: url('../img/icons/left_icon.png');
 
 }
-.autodoc-icon-next-page {
+.xbimTest-icon-next-page {
     background-image: url('../img/icons/right_icon.png');
 
 }
-.autodoc-icon-zoom-in {
+.xbimTest-icon-zoom-in {
     background-image: url('../img/icons/zoom_in.png');
     background-size: 28px 28px;
 }
-.autodoc-icon-zoom-out {
+.xbimTest-icon-zoom-out {
     background-image: url('../img/icons/zoom_out.png');
     background-size: 28px 28px;
 }
-.autodoc-icon-zoom-resize {
+.xbimTest-icon-zoom-resize {
     background-image: url('../img/icons/zoom_resize.png');
     background-size: 28px 28px;
 }
 
 /*MARKUPS*/
-.autodoc-icon-markup-rectangle {
+.xbimTest-icon-markup-rectangle {
     background-image: url('../img/icons/rectangle.png');
 
 }
 
-.autodoc-icon-markup-filled-rectangle {
+.xbimTest-icon-markup-filled-rectangle {
     background-image: url('../img/icons/filled_rectangle.png');
 
 }
 
-.autodoc-icon-markup-polyline {
+.xbimTest-icon-markup-polyline {
     background-image: url('../img/icons/polyline.png');
 
 }
 
-.autodoc-icon-markup-filled-polygon {
+.xbimTest-icon-markup-filled-polygon {
     background-image: url('../img/icons/filled_polygon.png');
 
 }
 
-.autodoc-icon-markup-cloud {
+.xbimTest-icon-markup-cloud {
     background-image: url('../img/icons/cloud.png');
 
 }
 
-.autodoc-icon-markup-arrow {
+.xbimTest-icon-markup-arrow {
     background-image: url('../img/icons/arrow.png');
 
 }
 
-.autodoc-icon-markup-freehand {
+.xbimTest-icon-markup-freehand {
     background-image: url('../img/icons/freehand.png');
 
 }
 
-.autodoc-icon-markup-text {
+.xbimTest-icon-markup-text {
     background-image: url('../img/icons/text.png');
 
 }
 
-.autodoc-icon-markup-color {
+.xbimTest-icon-markup-color {
     border: solid 2px #ffffff;
     border-radius:4px;
     /*background-color:#3F48CC;*/
@@ -190,32 +190,32 @@ img.img-ifc {
     margin-top: 3px;
 }
 
-.autodoc-icon-markup-undo {
+.xbimTest-icon-markup-undo {
     background-image: url('../img/icons/undo.png');
 
 }
 
-.autodoc-icon-markup-public {
+.xbimTest-icon-markup-public {
     background-image: url('../img/icons/public.png');
 
 }
 
-.autodoc-icon-markup-private {
+.xbimTest-icon-markup-private {
     background-image: url('../img/icons/private.png');
 
 }
 
-.autodoc-icon-markup-save {
+.xbimTest-icon-markup-save {
     background-image: url('../img/icons/save.png');
 
 }
 
-.autodoc-icon-markup-exit {
+.xbimTest-icon-markup-exit {
     background-image: url('../img/icons/exit.png');
 
 }
 
-.autodoc-icon-bg_preto {
+.xbimTest-icon-bg_preto {
     background-color: #000000 !important;
     border: solid 2px #ffffff;
     border-radius:4px;
@@ -224,7 +224,7 @@ img.img-ifc {
     margin-top: 3px;
 }
 
-.autodoc-icon-bg_branco {
+.xbimTest-icon-bg_branco {
     background-color: #FFFFFF !important;
     border: solid 2px #c5b1b1;    
     border-radius:4px;
@@ -233,7 +233,7 @@ img.img-ifc {
     margin-top: 3px;
 }
 
-.autodoc-icon-bg_cinza {
+.xbimTest-icon-bg_cinza {
     background-color: #5A5A5A !important;
     border: solid 2px #ffffff;
     border-radius:4px;
@@ -245,7 +245,7 @@ img.img-ifc {
 /* //////////////////////
    //SYTLE CONTAINER */
 
-.autodoc-body-viewer {
+.xbimTest-body-viewer {
     background: #FFFFFF;
 	font-family: ArtifaktElement, Helvetica Neue, Segoe UI Semilight, sans-serif;
 	-webkit-touch-callout: none;
@@ -260,7 +260,7 @@ img.img-ifc {
 	z-index: 1;
 }
 
-.autodoc-body-viewer .adsk-button-icon {
+.xbimTest-body-viewer .adsk-button-icon {
 	display: inline-block;
 	padding-top: 3px;
 	font-size: 24px;
@@ -272,7 +272,7 @@ img.img-ifc {
 	background-position: 50%;
 }
 
-.autodoc-body-viewer .adsk-button {
+.xbimTest-body-viewer .adsk-button {
 	position: relative;
 	float: left;
 	cursor: pointer;
@@ -284,27 +284,27 @@ img.img-ifc {
 	border-radius: 4px;
 }
 
-.autodoc-body-viewer.dark-theme .adsk-button.active, .autodoc-body-viewer.dark-theme .adsk-button:focus {
+.xbimTest-body-viewer.dark-theme .adsk-button.active, .xbimTest-body-viewer.dark-theme .adsk-button:focus {
 	color: #00bfff;
 	outline: none;
 	border-radius: 3px;
 	box-shadow: inset 0 2px 2px 0 #000;
 }
 
-.autodoc-body-viewer.dark-theme .adsk-button:hover {
+.xbimTest-body-viewer.dark-theme .adsk-button:hover {
 	color: #00bfff;
 	border: 1px solid #00bfff;
 }
 
-.autodoc-body-viewer.dark-theme {
+.xbimTest-body-viewer.dark-theme {
 	font-size: 14px;
 }
 
-.autodoc-body-viewer.dark-theme.quality-text {
+.xbimTest-body-viewer.dark-theme.quality-text {
 	text-rendering: geometricPrecision;
 }
 
-.autodoc-body-viewer .adsk-toolbar {
+.xbimTest-body-viewer .adsk-toolbar {
 	position: absolute;
 	bottom: 10px;
 	width: calc(100% - 20px);
@@ -314,11 +314,11 @@ img.img-ifc {
 }
 
 
-.autodoc-body-viewer .adsk-control.autodoc-hidden {
+.xbimTest-body-viewer .adsk-control.xbimTest-hidden {
     display: none;
 }
 
-.autodoc-body-viewer.dark-theme .adsk-control-group {
+.xbimTest-body-viewer.dark-theme .adsk-control-group {
 	color: #f4f4f4;
 	background-color: rgba(34, 34, 34, .94);
 	box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, .5);
@@ -337,13 +337,13 @@ img.img-ifc {
 	right: -5px;
 }
 
-.autodoc-body-viewer * {
+.xbimTest-body-viewer * {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
 
-.autodoc-body-viewer.dark-theme .adsk-control-tooltip {
+.xbimTest-body-viewer.dark-theme .adsk-control-tooltip {
     color: #f4f4f4;
     background-color: rgba(34, 34, 34, .94);
     box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
@@ -351,7 +351,7 @@ img.img-ifc {
     border-radius: 3px
 }
 
-.autodoc-body-viewer .adsk-control-tooltip {
+.xbimTest-body-viewer .adsk-control-tooltip {
     position: absolute;
     visibility: hidden;
     bottom: 120%;
@@ -367,13 +367,13 @@ img.img-ifc {
     border-radius: 3px
 }
 
-.autodoc-body-viewer .adsk-control:hover > .adsk-control-tooltip {
+.xbimTest-body-viewer .adsk-control:hover > .adsk-control-tooltip {
 
     visibility: visible;
 
 }
 
-.autodoc-body-viewer .adsk-button > .toolbar-vertical-group {
+.xbimTest-body-viewer .adsk-button > .toolbar-vertical-group {
 	position: absolute;
 	bottom: 125%;
 	left: -5px;
@@ -381,15 +381,15 @@ img.img-ifc {
 	transition: all .2s ease;
 	z-index: 1;
 }
-.autodoc-body-viewer .notouch .adsk-button>.toolbar-vertical-group:hover~.adsk-control-tooltip {
+.xbimTest-body-viewer .notouch .adsk-button>.toolbar-vertical-group:hover~.adsk-control-tooltip {
     visibility: hidden
 }
 
-.autodoc-body-viewer .adsk-button>.toolbar-vertical-group~.adsk-control-tooltip {
+.xbimTest-body-viewer .adsk-button>.toolbar-vertical-group~.adsk-control-tooltip {
     left: 120%
 }
 
-.autodoc-body-viewer .adsk-button>.toolbar-vertical-group>.adsk-button>.adsk-control-tooltip {
+.xbimTest-body-viewer .adsk-button>.toolbar-vertical-group>.adsk-button>.adsk-control-tooltip {
     left: 120%;
     bottom: 50%
 }
@@ -410,33 +410,33 @@ img.img-ifc {
     padding: 0 5px
 }
 
-.autodoc-icon-comments {
+.xbimTest-icon-comments {
     background-image: url('../img/icons/comments.png');
     background-size: 25px 19px;
 }
 
-.autodoc-icon-info {
+.xbimTest-icon-info {
     background-image: url('../img/icons/info.png');
     background-size: 25px 25px;
 }
 
-.autodoc-display-flex{
+.xbimTest-display-flex{
     display:flex; 
 }
 
-.autodoc-flex-grow-1{
+.xbimTest-flex-grow-1{
     flex-grow:1;
 }
 
-.autodoc-font-size-14{
+.xbimTest-font-size-14{
     font-size:14px !important;
 }
 
-.autodoc-width-50{
+.xbimTest-width-50{
     width:50px !important;
 }
 
-.autodoc-body-viewer .adsk-label-button label {
+.xbimTest-body-viewer .adsk-label-button label {
     display: block;
     font-size: 12px;
     padding: 8px 10px;
