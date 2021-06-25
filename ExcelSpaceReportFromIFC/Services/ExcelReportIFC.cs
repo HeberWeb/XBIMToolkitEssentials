@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Xbim.Ifc;
 using Xbim.Ifc4.Interfaces;
 
-namespace ExcelSpaceReportFromIFC
+namespace Services.ExcelSpaceReportFromIFC
 {
     class ExcelReportIFC
     {

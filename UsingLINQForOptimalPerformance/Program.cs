@@ -7,6 +7,7 @@ namespace UsingLINQForOptimalPerformance
     {
         static void Main(string[] args)
         {
+            Console.Title = "Using LINQ For Optimal Performance";
             TestsWithAndWithoutLINQ.SelectTypeSelection();
         }
     }

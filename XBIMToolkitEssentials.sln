@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelSpaceReportFromIFC", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorialEventfulBuildingWebUi", "TutorialEventfulBuildingWebUi\TutorialEventfulBuildingWebUi.csproj", "{B3CA66F7-6FF9-4E4A-A4DF-D85CCCCFC205}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingLINQForOptimalPerformance", "UsingLINQForOptimalPerformance\UsingLINQForOptimalPerformance.csproj", "{3F0C9D8D-C1A1-4DF8-ABEA-8FFFEDD6A8AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingLINQForOptimalPerformance", "UsingLINQForOptimalPerformance\UsingLINQForOptimalPerformance.csproj", "{3F0C9D8D-C1A1-4DF8-ABEA-8FFFEDD6A8AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STEPToXMLAndBackAgain", "STEPToXMLAndBackAgain\STEPToXMLAndBackAgain.csproj", "{28B13627-EDBB-4877-9D41-EF7E2F1696FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{3F0C9D8D-C1A1-4DF8-ABEA-8FFFEDD6A8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F0C9D8D-C1A1-4DF8-ABEA-8FFFEDD6A8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F0C9D8D-C1A1-4DF8-ABEA-8FFFEDD6A8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28B13627-EDBB-4877-9D41-EF7E2F1696FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B13627-EDBB-4877-9D41-EF7E2F1696FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B13627-EDBB-4877-9D41-EF7E2F1696FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B13627-EDBB-4877-9D41-EF7E2F1696FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,6 +7,7 @@ namespace SpatialHierarchy
     {
         static void Main(string[] args)
         {
+            Console.Title = "Spatial Hierarchy";
             SpatialStructureExample.Show();
         }
     }
