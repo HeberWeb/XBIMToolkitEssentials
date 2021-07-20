@@ -15,7 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorialEventfulBuildingWeb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsingLINQForOptimalPerformance", "UsingLINQForOptimalPerformance\UsingLINQForOptimalPerformance.csproj", "{3F0C9D8D-C1A1-4DF8-ABEA-8FFFEDD6A8AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STEPToXMLAndBackAgain", "STEPToXMLAndBackAgain\STEPToXMLAndBackAgain.csproj", "{28B13627-EDBB-4877-9D41-EF7E2F1696FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STEPToXMLAndBackAgain", "STEPToXMLAndBackAgain\STEPToXMLAndBackAgain.csproj", "{28B13627-EDBB-4877-9D41-EF7E2F1696FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertIFCToWexbim", "ConvertIFCToWexbim\ConvertIFCToWexbim.csproj", "{1A84F3CD-7EC7-4960-A592-2D6B3DB2E300}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{28B13627-EDBB-4877-9D41-EF7E2F1696FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28B13627-EDBB-4877-9D41-EF7E2F1696FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28B13627-EDBB-4877-9D41-EF7E2F1696FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A84F3CD-7EC7-4960-A592-2D6B3DB2E300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A84F3CD-7EC7-4960-A592-2D6B3DB2E300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A84F3CD-7EC7-4960-A592-2D6B3DB2E300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A84F3CD-7EC7-4960-A592-2D6B3DB2E300}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

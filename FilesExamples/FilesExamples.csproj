@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="FileTests\01_BIMcollab_Example_ARC.ifczip" />
+    <None Remove="FileTests\02_BIMcollab_Example_STR.ifczip" />
+    <None Remove="FileTests\03_BIMcollab_Example_MEP.ifczip" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="FileTests\0.ifc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
