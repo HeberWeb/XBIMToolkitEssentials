@@ -3,6 +3,8 @@ var viewerFile = null;
 var pickedId = null;
 var countLoaded = 0;
 var argTeste = null;
+var navCube = null;
+var grid = null;
 
 $(document).ready(function () {
     $('#testView').click(function () {
@@ -16,14 +18,39 @@ var classButtonIcon = 'adsk-button-icon'
 var classControlTooltip = 'adsk-control-tooltip'
 
 var viewer = {
-    onLoadedFileOrFiles: function () {
+    //METODOS DE CORTE SENDO INICIADOS NO EVENTO LOADED AO CARREGAR O MODELO
+    setClipping: function () {
+        var oX = $("#sliderOx").val();
+        $("#sliderTx").text(oX);
 
+        var oY = $("#sliderOy").val();
+        $("#sliderTy").text(oY);
+
+        var oZ = $("#sliderOz").val();
+        $("#sliderTz").text(oZ);
+
+        var corte = $("#sliderCorte").val();
+        $("#sliderTteste").text(corte);
+
+        console.log(corte)
+        viewerFile.setClippingPlaneA([oX, oY, oZ, corte]);
+    },
+
+    setLimitClipping: function (_this) {
+        var $this = $(_this);
+        $("#sliderCorte").prop('max', $this.val());
+        $("#sliderCorte").prop('min', -$this.val());
+        viewer.setClipping();
     },
 
     initViewer: function () {
         countLoaded = 0;
         if (check.noErrors) {
             viewerFile = new Viewer('viewer');
+            navCube = new NavigationCube();
+            grid = new Grid();
+            viewerFile.addPlugin(navCube)
+            viewerFile.addPlugin(grid)
 
             viewerFile.on('pick', function (args) {
                 var id = args.id;
@@ -34,11 +61,25 @@ var viewer = {
                 //viewer.initHiding();
                 viewerFile.start();
                 viewerFile.show(ViewType.DEFAULT)
-
+                viewerFile.background = [0, 0, 0, 255]
                 countLoaded++;
-                viewer.onLoadedFileOrFiles();
                 argTeste = args;
                 
+                $('#sliderLimit').on('input', function () {
+                    viewer.setLimitClipping(this)
+                });
+
+                viewer.setClipping()
+                $('.sliderClicp').on('input', function () {
+                    viewer.setClipping()
+                })
+
+                $('#corteZero').click(function () {
+                    $("#sliderCorte").val(0.0)
+                    viewer.setClipping()
+                });
+
+                $('#bloco_corte').show();
             });
 
             viewerFile.on('fps', function (fps) {

@@ -1,4 +1,6 @@
-﻿
+﻿body{
+    overflow:hidden
+}
 /* //////////////////////
    // ICONS */
 
@@ -305,8 +307,8 @@ img.img-ifc {
 }
 
 .xbimTest-body-viewer .adsk-toolbar {
-	position: absolute;
-	bottom: 10px;
+	position: relative; 
+	bottom: 60px;
 	width: calc(100% - 20px);
 	text-align: center;
 	z-index: 5;
